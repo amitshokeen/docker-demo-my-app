@@ -1,0 +1,23 @@
+{
+  "name": "docker-demo-my-app",
+  "version": "1.0.0",
+  "description": "A small node js + mongo db demo app to try developing with docker containers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitshokeen/docker-demo-my-app.git"
+  },
+  "author": "Amit Shokeen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amitshokeen/docker-demo-my-app/issues"
+  },
+  "homepage": "https://github.com/amitshokeen/docker-demo-my-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
