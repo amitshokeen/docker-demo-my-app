@@ -91,7 +91,7 @@ $ docker run -d \
                     *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 
-###Docker Compose
+### Docker Compose
 Docker Compose takes care of creating a common network. So the equivalent of ```--net mongo-network``` will not be needed in the docker compose file that has the services of mongodb and mongo-express listed.
 
 A sample yaml file: mongo.yaml
@@ -130,7 +130,7 @@ If you want to ‘down’ the docker services, then:
                     *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 
-###Dockerfile
+### Dockerfile
 Used to create your own image. It is basically the automation of docker image creation.
 
 > https://www.youtube.com/watch?v=LQjaJINkQXY
@@ -190,7 +190,7 @@ For that you must remove the image with this command:
 
                     *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
-###Docker private repository (also called as a registry for Docker)
+### Docker private repository (also called as a registry for Docker)
 
 * on **AWS** you can use the **ECR** service (Elastic Container Registry)
 * one can also use **Digital Ocean** or something else for the docker private registry.
@@ -208,7 +208,7 @@ You will need the **AWS CLI** and its credentials configured.
 	* Now go ahead with the docker push using the new name (this is also given in AWS)
 	
 ____________________________________________________________________
-####Image naming concepts in Docker repositories
+#### Image naming concepts in Docker repositories
 
 * **```registryDomain/imageName:tag```**
 
@@ -226,7 +226,7 @@ ____________________________________________________________________
                     *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 
-###Deploying the application to the server
+### Deploying the application to the server
 
 * so now that the image has been pushed to the private docker repo on AWS, we must now add to the **mongo.yaml** file as indicated below:
 ____________________________________________________________
@@ -252,7 +252,7 @@ services:
       - ME_CONFIG_MONGODB_SERVER=mongodb
 ```
 ____________________________________________________________
->This Docker-Compose file would be used on the server to deploy all the applications/services
+> This Docker-Compose file would be used on the server to deploy all the applications/services
 
 > Now use the AWS ECR hints to help login to the docker repo from the server where deployment has to be done.
 > That login to the private docker repo from the server would look like this:
@@ -267,7 +267,7 @@ ____________________________________________________________
                     *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 
-###Docker Volumes
+### Docker Volumes
 *  needed for Data Persistence. So that data or state is not lost once the containers are restarted.
 * To achieve that we basically plug the physical file system path to the container’s file system path. 
 * This connection of the file systems will ensure automatic replication of data.
